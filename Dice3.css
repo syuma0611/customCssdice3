@@ -132,7 +132,9 @@ body {
 /** カットインの削除 */
 .erRkBX,
 /** ステータスの削除 */
-.gpoAiV {
+.gpoAiV,
+/* 監視モード */
+.MuiSnackbar-root {
     display: none !important;
 }
 
@@ -269,4 +271,8 @@ body {
     padding-right: var(--content-right-space) !important;
     /** テキストボックスの縦幅 */
     height: var(--content-height) !important;
+}
+
+.MuiPaper-root>img[src=""] {
+  display: none;
 }
