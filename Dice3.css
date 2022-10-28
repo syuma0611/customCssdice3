@@ -16,9 +16,10 @@
     **************************/
     /** ◆◆◆ウィンドウ◆◆◆ */
     /** 横幅 */
-    --dice-win-width: 700px;
+    --dice-win-width: 780px;
     /** 背景色 */
-    --dice-win-background: rgba(22, 22, 22, 0.84);
+    --dice-win-background:
+    rgba(22, 22, 22, 0.84);
     /** 枠線 */
     --dice-win-border: solid 5px white;
     /** 角の丸み */
@@ -169,7 +170,7 @@ body {
 /** サイコロ画像の表示 */
 .cpRwfx {
   display: var(--disp-dice-picture) !important;
-}}
+}
 
 /**************************
 ダイスウィンドウの設定
