@@ -173,7 +173,7 @@ div[tabindex="0"] {
 }
 
 /** サイコロ画像の表示 */
-.fpJfOM {
+.cKbaat {
   display: var(--disp-dice-picture) !important;
 }
 
@@ -182,7 +182,7 @@ div[tabindex="0"] {
 **************************/
 
 /** ウィンドウ */
-.fNRKxo {
+.XTvKq {
   /** 横幅 */
   width: var(--dice-win-width) !important;
   /** 背景色 */
@@ -193,7 +193,7 @@ div[tabindex="0"] {
   border-radius: var(--dice-win-radius) !important;
 }
 /* ダイスウィンドウ裏の背景色非表示 */
-.ihOmcc {
+.iRDaWA{
   background-color: rgba(0, 0, 0, 0);
   padding-top: 0px !important;
 }
@@ -202,12 +202,12 @@ div[tabindex="0"] {
   box-shadow: none !important;
 }
 /** ダイス画像 */
-.jUQjBC {
+.cLnHZq{
   /** サイズ設定 */
   width: var(--dice-pic-size) !important;
   height: var(--dice-pic-size) !important;
 }
-.fpJfOM {
+.cKbaat {
   /** 表示、非表示 */
   display: var(--disp-dice-pic) !important;
   /** 上下位置の調整 */
@@ -272,7 +272,7 @@ div[tabindex="0"] {
 }
 
 
-.jduNjR {
+.bEOMjo {
   /** 下の余白 */
   padding-bottom: var(--content-bottom-space) !important;
   /** 左の余白 */
@@ -284,7 +284,7 @@ div[tabindex="0"] {
 }
 
 /** スクロールバーの削除 */
-.jduNjR::-webkit-scrollbar {
+.bEOMjo :-webkit-scrollbar {
   display: none !important;
 }
 
