@@ -193,7 +193,7 @@ div[tabindex="0"] {
   border-radius: var(--dice-win-radius) !important;
 }
 /* ダイスウィンドウ裏の背景色非表示 */
-.TAqeW {
+.MuiPaper-root {
   background-color: rgba(0, 0, 0, 0);
   padding-top: 0px !important;
 }
