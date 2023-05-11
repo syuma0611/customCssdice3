@@ -63,7 +63,7 @@
     /** フォントの太さ(normal or bold) */
     --dice-result-font-weight: normal;
     /** 文字サイズ */
-    --dice-result-size: 22px;
+    --dice-result-size: 21px;
     /** 上の余白 */
     --dice-result-top-space: 15px;
     /** 下の余白 */
@@ -173,7 +173,7 @@ div[tabindex="0"] {
 }
 
 /** サイコロ画像の表示 */
-.cKbaat {
+.dAepyZ {
   display: var(--disp-dice-picture) !important;
 }
 
@@ -182,7 +182,7 @@ div[tabindex="0"] {
 **************************/
 
 /** ウィンドウ */
-.XTvKq {
+.eaRKuf {
   /** 横幅 */
   width: var(--dice-win-width) !important;
   /** 背景色 */
@@ -193,7 +193,7 @@ div[tabindex="0"] {
   border-radius: var(--dice-win-radius) !important;
 }
 /* ダイスウィンドウ裏の背景色非表示 */
-.iRDaWA{
+.TAqeW {
   background-color: rgba(0, 0, 0, 0);
   padding-top: 0px !important;
 }
@@ -202,12 +202,12 @@ div[tabindex="0"] {
   box-shadow: none !important;
 }
 /** ダイス画像 */
-.cLnHZq{
+.knYIyr{
   /** サイズ設定 */
   width: var(--dice-pic-size) !important;
   height: var(--dice-pic-size) !important;
 }
-.cKbaat {
+.dAepyZ {
   /** 表示、非表示 */
   display: var(--disp-dice-pic) !important;
   /** 上下位置の調整 */
@@ -246,7 +246,7 @@ div[tabindex="0"] {
   /** フォント */
   font-family: var(--dice-result-font) !important;
   /** フォント色 */
-  color: var(--dice-result-color) !important;
+  /**color: var(--dice-result-color) !important;**/
   /** フォントの太さ(normal or bold) */
   font-weight: var(--dice-result-font-weight) !important;
   /** 文字サイズ */
@@ -272,7 +272,7 @@ div[tabindex="0"] {
 }
 
 
-.bEOMjo {
+.cJHYcE {
   /** 下の余白 */
   padding-bottom: var(--content-bottom-space) !important;
   /** 左の余白 */
@@ -284,7 +284,7 @@ div[tabindex="0"] {
 }
 
 /** スクロールバーの削除 */
-.bEOMjo :-webkit-scrollbar {
+.cJHYcE :-webkit-scrollbar {
   display: none !important;
 }
 
