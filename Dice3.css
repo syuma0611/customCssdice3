@@ -30,7 +30,7 @@
   
     /** ◆◆◆ダイス画像◆◆◆ */
     /** 表示、非表示(非表示の場合はnoneを設定) */
-    --disp-dice-pic: flex;
+    --disp-dice-picture: flex;
     /** サイズ設定 */
     --dice-pic-size: 70px;
     /** 上下位置の調整 */
