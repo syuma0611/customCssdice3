@@ -16,7 +16,7 @@
     **************************/
     /** ◆◆◆ウィンドウ◆◆◆ */
     /** 横幅 */
-    --dice-win-width: 780px;
+    --dice-win-width: 700px;
     /** 背景色 */
     --dice-win-background:
     rgba(22, 22, 22, 0.84);
@@ -25,6 +25,9 @@
     /** 角の丸み */
     --dice-win-radius: 15px;
 
+    /** ◆◆◆ダイス画像◆◆◆ */
+    --icon-bottom-space: 220px;
+  
     /** ◆◆◆ダイス画像◆◆◆ */
     /** 表示、非表示(非表示の場合はnoneを設定) */
     --disp-dice-pic: flex;
@@ -101,7 +104,6 @@ body {
 }
 
 
-
 /**************************
  非表示項目の設定
 **************************/
@@ -111,9 +113,16 @@ div[open],
 .MuiPaper-root.MuiAppBar-root.MuiAppBar-positionFixed.MuiAppBar-colorDefault.MuiPaper-elevation0+div,
 /* 盤面 */
 div[tabindex="0"]>div:nth-child(1),
-/* キャラ */
-.MuiButtonBase-root+div+div:not(.MuiPaper-root),
-.MuiPaper-root.MuiPaper-elevation1.MuiPaper-rounded+div,
+/*
+  キャラ
+  6: 初期位置
+  7: タイマー or 吹き出し
+  8: タイマー and 吹き出し
+  ※拡大縮小が消える不都合あり
+*/
+[tabindex="0"]>div:nth-child(6):not(.MuiPaper-root),
+[tabindex="0"]>div:nth-child(7):not(.MuiPaper-root),
+[tabindex="0"]>div:nth-child(8):not(.MuiPaper-root),
 /* チャット */
 .MuiDrawer-root.MuiDrawer-docked {
   display: none !important;
@@ -131,13 +140,16 @@ header>.MuiToolbar-gutters,
 /* 音量 */
 div[tabindex="0"]>div:nth-child(3),
 /* 拡大縮小 */
-.MuiButtonBase-root+div,
+button.MuiButtonBase-root:not(.MuiTab-root),
+button.MuiButtonBase-root+span,
 /* 鉛筆ボタン */
 .MuiButtonBase-root.MuiFab-root,
 /* 監視モード */
 .MuiSnackbar-root,
 /* タイマー */
 .MuiPaper-elevation5,
+/* 新しいダイスを非表示 */
+div[style="position: relative; width: 100%; height: 100%; overflow: hidden;"],
 /* スクロールバー */
 ::-webkit-scrollbar {
   display: none !important;
@@ -147,6 +159,12 @@ div[tabindex="0"]>div:nth-child(3),
 div[tabindex="0"] {
   width: 100% !important;
 }
+
+header.MuiPaper-elevation{
+  display: none !important;
+  /** ヘッダー削除 */
+}
+
 
 /** 広告の削除 */
 .MuiDialog-scrollPaper {
@@ -158,10 +176,7 @@ div[tabindex="0"] {
   /** 広告背景の削除 */
 }
 
-/** スクロールバーの削除 */
-::-webkit-scrollbar {
-  display: none !important;
-}
+
 
 /**************************
  表示項目の設定
@@ -173,7 +188,7 @@ div[tabindex="0"] {
 }
 
 /** サイコロ画像の表示 */
-.jDTQmL {
+img[src*="dice"] {
   display: var(--disp-dice-picture) !important;
 }
 
@@ -181,7 +196,8 @@ div[tabindex="0"] {
 ダイスウィンドウの設定
 **************************/
 /** ウィンドウ */
-.jhvale {
+.MuiPaper-elevation1,
+.MuiPaper-rounded:nth-child(2) {
   /** 横幅 */
   width: var(--dice-win-width) !important;
   /** 背景色 */
@@ -190,24 +206,34 @@ div[tabindex="0"] {
   border: var(--dice-win-border) !important;
   /** 角の丸み */
   border-radius: var(--dice-win-radius) !important;
+  /** 背景色の見切れ解消 */
+  position: absolute !important;
+  bottom: 10px !important;
 }
-
 /* ダイスウィンドウ裏の背景色非表示 */
-.MuiPaper-root {
+.MuiPaper-elevation1,
+.MuiPaper-rounded:first-child {
   background-color: rgba(0, 0, 0, 0);
   padding-top: 0px !important;
+  border: none !important;
 }
 /* ダイスウィンドウ周りのドロップシャドウ非表示 */
 .MuiPaper-elevation1 {
   box-shadow: none !important;
 }
+
+/* アイコン位置 */
+.MuiPaper-root>img {
+  bottom: var(--icon-bottom-space) !important;
+}
+
 /** ダイス画像 */
-.gdXOFy{
+img[src*="dice"]{
   /** サイズ設定 */
   width: var(--dice-pic-size) !important;
   height: var(--dice-pic-size) !important;
 }
-.jDTQmL {
+.cMNEPM {
   /** 表示、非表示 */
   display: var(--disp-dice-pic) !important;
   /** 上下位置の調整 */
@@ -241,6 +267,9 @@ div[tabindex="0"] {
   padding-left: 0px !important;
 }
 
+
+
+
 /** ダイス結果(□＞58) */
 .MuiPaper-rounded .MuiTypography-body2 {
   /** フォント */
@@ -272,7 +301,7 @@ div[tabindex="0"] {
 }
 
 
-.dphamX {
+.MuiToolbar-root+div  {
   /** 下の余白 */
   padding-bottom: var(--content-bottom-space) !important;
   /** 左の余白 */
@@ -281,11 +310,6 @@ div[tabindex="0"] {
   padding-right: var(--content-right-space) !important;
   /** テキストボックスの縦幅 */
   height: var(--content-height) !important;
-}
-
-/** スクロールバーの削除 */
-.dphamX :-webkit-scrollbar {
-  display: none !important;
 }
 
 .MuiPaper-root>img[src=""] {
@@ -297,5 +321,3 @@ div[tabindex="0"] {
 .sc-bPPhlf{
   display: none;
 }
-
-
