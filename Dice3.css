@@ -233,7 +233,7 @@ img[src*="dice"]{
   width: var(--dice-pic-size) !important;
   height: var(--dice-pic-size) !important;
 }
-.cMNEPM {
+.gkRMkm {
   /** 表示、非表示 */
   display: var(--disp-dice-pic) !important;
   /** 上下位置の調整 */
@@ -320,4 +320,57 @@ img[src*="dice"]{
 /** 新ダイス表記の非表示 */
 .sc-bPPhlf{
   display: none;
+}
+
+:root {
+  /**************************
+   表示項目の設定
+  **************************/
+  /** ダイス結果(下)のボタン非表示 */
+  --disp-dice-window-btn: none !important;
+  /** サイコロ画像の表示 */
+  --disp-dice-picture: flex !important;
+
+  /**************************
+   ダイスウィンドウの設定
+  **************************/
+  /** ◆◆◆ウィンドウ◆◆◆*/
+  /** 枠線 */
+  --dice-win-border: none !important;
+
+  /** 背景色 */
+  --dice-win-background: rgba(8, 8, 8, 0.98)!important;
+
+  
+  /** ◆◆◆ダイス画像◆◆◆ */
+  /** サイズ設定 */
+  --dice-pic-size: 85px !important;
+
+  /** ◆◆◆内容◆◆◆ */
+  /** 文字サイズ */
+  --content-size: 25px !important;
+
+    /** ◆◆◆ウィンドウ◆◆◆ */
+    /** 横幅 */
+    --dice-win-width: 780px;
+
+  
+}
+
+/**************************
+ 駒アイコンの設定
+**************************/
+/* アイコン */
+.MuiPaper-root>img {
+ /** アイコンを表示するか：inline-flex⇒通常、none：非表示 */
+  display: inline-flex;
+  width: 120px;
+  height: 120px;
+  margin-bottom: 5px;
+  border-radius: 50%;
+  background: #F6F7F8;
+  border: solid 4px #ffffff;
+  background: #ffffff36; 
+  object-fit: cover;
+  object-position: top;
 }
