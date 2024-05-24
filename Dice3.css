@@ -196,8 +196,8 @@ img[src*="dice"] {
 ダイスウィンドウの設定
 **************************/
 /** ウィンドウ */
-.MuiPaper-elevation1,
-.MuiPaper-rounded:nth-child(2) {
+
+.MuiPaper-root>.MuiPaper-root {
   /** 横幅 */
   width: var(--dice-win-width) !important;
   /** 背景色 */
@@ -211,12 +211,12 @@ img[src*="dice"] {
   bottom: 10px !important;
 }
 /* ダイスウィンドウ裏の背景色非表示 */
-.MuiPaper-elevation1,
-.MuiPaper-rounded:first-child {
-  background-color: rgba(0, 0, 0, 0);
+div[tabindex="0"]>.MuiPaper-root  {
+  background-color: rgb(0 0 0 / 0%);
   padding-top: 0px !important;
   border: none !important;
 }
+
 /* ダイスウィンドウ周りのドロップシャドウ非表示 */
 .MuiPaper-elevation1 {
   box-shadow: none !important;
@@ -320,57 +320,4 @@ img[src*="dice"]{
 /** 新ダイス表記の非表示 */
 .sc-bPPhlf{
   display: none;
-}
-
-:root {
-  /**************************
-   表示項目の設定
-  **************************/
-  /** ダイス結果(下)のボタン非表示 */
-  --disp-dice-window-btn: none !important;
-  /** サイコロ画像の表示 */
-  --disp-dice-picture: flex !important;
-
-  /**************************
-   ダイスウィンドウの設定
-  **************************/
-  /** ◆◆◆ウィンドウ◆◆◆*/
-  /** 枠線 */
-  --dice-win-border: none !important;
-
-  /** 背景色 */
-  --dice-win-background: rgba(8, 8, 8, 0.98)!important;
-
-  
-  /** ◆◆◆ダイス画像◆◆◆ */
-  /** サイズ設定 */
-  --dice-pic-size: 85px !important;
-
-  /** ◆◆◆内容◆◆◆ */
-  /** 文字サイズ */
-  --content-size: 25px !important;
-
-    /** ◆◆◆ウィンドウ◆◆◆ */
-    /** 横幅 */
-    --dice-win-width: 780px;
-
-  
-}
-
-/**************************
- 駒アイコンの設定
-**************************/
-/* アイコン */
-.MuiPaper-root>img {
- /** アイコンを表示するか：inline-flex⇒通常、none：非表示 */
-  display: inline-flex;
-  width: 120px;
-  height: 120px;
-  margin-bottom: 5px;
-  border-radius: 50%;
-  background: #F6F7F8;
-  border: solid 4px #ffffff;
-  background: #ffffff36; 
-  object-fit: cover;
-  object-position: top;
 }
