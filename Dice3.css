@@ -137,8 +137,10 @@ div[tabindex="0"]>div:nth-child(1),
 /* ヘッダー削除 */
 /* headerのみだとチャットのタブも消える */
 header>.MuiToolbar-gutters,
-/* 音量 */
+/*　諸々 */
 div[tabindex="0"]>div:nth-child(3),
+/*　ステータス非表示（臨時） */
+.sc-ljpcOE,
 /* 拡大縮小 */
 button.MuiButtonBase-root:not(.MuiTab-root),
 button.MuiButtonBase-root+span,
